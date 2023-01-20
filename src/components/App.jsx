@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import Select from 'react-select';
 import { fetchBreeds, fetchDogByBreed } from 'api';
 import { Dog } from './Dog';
 import { BreedSelect } from './BreedSelect';
