@@ -4,6 +4,7 @@ import { fetchBreeds, fetchDogByBreed } from 'api';
 import { Dog } from './Dog';
 import { BreedSelect } from './BreedSelect';
 
+import { BeatLoader } from 'react-spinners';
 // const options = [
 //   { value: 'chocolate', label: 'Chocolate' },
 //   { value: 'strawberry', label: 'Strawberry' },
@@ -41,8 +42,14 @@ export class App extends Component {
     const { dog, error, breeds, isLoadingDog } = this.state;
     return (
       <>
-        {isLoadingDog && <h2>Loading...</h2>}
         <BreedSelect breeds={breeds} onSelect={this.selectBreed} />
+
+        <BeatLoader
+          color="blue"
+          loading={isLoadingDog}
+          size={15}
+          aria-label="Loading Spinner"
+        />
 
         {error && <div>Oh... something went wrong</div>}
         {dog && <Dog dog={dog} />}
