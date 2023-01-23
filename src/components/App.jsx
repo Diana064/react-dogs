@@ -15,6 +15,7 @@ export class App extends Component {
     breeds: [],
     error: null,
     dog: null,
+    isLoadingDog: false,
   };
   async componentDidMount() {
     try {
@@ -26,17 +27,21 @@ export class App extends Component {
 
   selectBreed = async breedId => {
     try {
+      this.setState({ isLoadingDog: true });
       const dog = await fetchDogByBreed(breedId);
       this.setState({ dog });
     } catch (error) {
       this.setState({ error: error.message });
+    } finally {
+      this.setState({ isLoadingDog: false });
     }
   };
 
   render() {
-    const { dog, error, breeds } = this.state;
+    const { dog, error, breeds, isLoadingDog } = this.state;
     return (
       <>
+        {isLoadingDog && <h2>Loading...</h2>}
         <BreedSelect breeds={breeds} onSelect={this.selectBreed} />
 
         {error && <div>Oh... something went wrong</div>}
