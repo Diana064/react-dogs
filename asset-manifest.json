@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-dogs/static/css/main.7acaea2f.css",
-    "main.js": "/react-dogs/static/js/main.be31faaa.js",
+    "main.css": "/react-dogs/static/css/main.e6c13ad2.css",
+    "main.js": "/react-dogs/static/js/main.f7f40797.js",
     "index.html": "/react-dogs/index.html",
-    "main.7acaea2f.css.map": "/react-dogs/static/css/main.7acaea2f.css.map",
-    "main.be31faaa.js.map": "/react-dogs/static/js/main.be31faaa.js.map"
+    "main.e6c13ad2.css.map": "/react-dogs/static/css/main.e6c13ad2.css.map",
+    "main.f7f40797.js.map": "/react-dogs/static/js/main.f7f40797.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.be31faaa.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f7f40797.js"
   ]
 }
