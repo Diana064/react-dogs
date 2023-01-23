@@ -3,6 +3,8 @@ import { Component } from 'react';
 import { fetchDogByBreed } from 'api';
 import { Dog } from './Dog';
 import { BreedSelect } from './BreedSelect';
+import { DogSkeleton } from './DogSkeleton';
+import { ErrorMessage } from './ErrorMessage';
 
 // const options = [
 //   { value: 'chocolate', label: 'Chocolate' },
@@ -35,9 +37,9 @@ export class App extends Component {
     return (
       <>
         <BreedSelect onSelect={this.selectBreed} />
-        {error && <div>1</div>}
+        {error && <ErrorMessage />}
 
-        {isLoadingDog && <div>D</div>}
+        {isLoadingDog && <DogSkeleton />}
 
         {dog && !isLoadingDog && <Dog dog={dog} />}
       </>

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Select from 'react-select';
 import { fetchBreeds } from 'api';
+import { ErrorMessage } from './ErrorMessage';
 
 // ({ breeds, onSelect })
 export class BreedSelect extends Component {
@@ -39,7 +40,7 @@ export class BreedSelect extends Component {
           options={options}
           onChange={option => onSelect(option.value)}
         />
-        {error && <div>1</div>}
+        {error && <ErrorMessage />}
       </div>
     );
   }
